@@ -9,7 +9,8 @@
         <title>Knox Crichton</title>
     </head>
     <body>
-		<div class="w3-container w3-green w3-text-lightgrey">
+	    <!--All commented out for MothersDay Site  -->
+		<!-- <div class="w3-container w3-green w3-text-lightgrey">
         		<h1>Welcome to knoxcrichton.com!</h1>
         		<h3>If you somehow stumbled upon this, it's under construction. I'd love for you to check back later at <a href="https://www.knoxcrichton.com">knoxcrichton.com</a> or <a href="https://www.obknoxious.github.io">obknoxious.github.io</a></h3>
 		</div>
@@ -24,8 +25,30 @@
 				<h4><a href="url">A little more about me ></a></h4>
 			</footer>
 		</div>
-		<!-- <div class="w3-card-4" style="width:30%;">
+ 		<div class="w3-card-4" style="width:30%;">
 			 <img src="./media/profile.png" alt="Me, Knox Crichton">
 		</div> -->
+
+		<!--Mothers day site code starts here-->
+		<img class="mySlides" src="./media/test.jpg" alt="Test Photo">
+		<img class="mySlides" src="./media/greyangular.jpg" alt="Test Photo">
+		<img class="mySlides" src="./media/test.jpg" alt="Test Photo">
+		<img class="mySlides" src="./media/greyangular.jpg" alt="Test Photo">
+		<script>
+		var myIndex = 0;
+		carousel();
+
+		function carousel() {
+		    var i;
+		    var x = document.getElementsByClassName("mySlides");
+		    for (i = 0; i < x.length; i++) {
+		       x[i].style.display = "none";
+		    }
+		    myIndex++;
+		    if (myIndex > x.length) {myIndex = 1}
+		    x[myIndex-1].style.display = "block";
+		    setTimeout(carousel, 5000);
+		}
+		</script>
 	</body>
 </html>
