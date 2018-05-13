@@ -30,38 +30,94 @@
 		</div> -->
 
 		<!--Mothers day site code starts here-->
+	<h2 class="w3-center" style="color:red;">Happy Mother's Day!</h2>
 	<div class="w3-content w3-display-container">
-		<div class="w3-display-container mySlides">
+		<div class="w3-center w3-display-container mySlides">
 			<img src="./media/Mday/IMG_0153.jpg" alt="Test Photo" style="width:90%;">
+			<div class="w3-content" style="max-width:90%">
+			  <div class="w3-container w3-red">
+			    <h3><b>Nerdy Stuff</b></h3>
+			    <h4><i>Thank you for going so far out of your comfort zone to show interest and be knowledgeable in things I like, that is really rare for a parent and it shows just how great of one you are!</i></h4>
+			  </div>
+		  	</div>
 		</div>
-		<div class="w3-display-container mySlides">
+		<div class="w3-center w3-display-container mySlides">
 			<img  src="./media/Mday/IMG_1032.jpg" alt="Test Photo" style="width:90%;">
+			<div class="w3-content" style="max-width:90%">
+			  <div class="w3-container w3-red">
+			    <h3><b>Supporting Robotics</b></h3>
+			    <h4><i>In the past I questionsed your support of robotics, but this year I can really tell how you care for the team just like I do and having you back the program has made me love it even more. I can't express enough how much I appreciate this.</i></h4>
+			  </div>
+			</div>
 		</div>
-		<div class="w3-display-container mySlides">
+		<div class="w3-center w3-display-container mySlides">
 			<img src="./media/Mday/IMG_2654.JPG" alt="Test Photo" style="width:90%;">
+			<div class="w3-content" style="max-width:90%">
+			  <div class="w3-container w3-red">
+			    <h3><b>Holidays</b></h3>
+			    <h4><i>Holidays can really be a stressful time, but I really enjoy them because we get to spend great quality time as a family, which we sometimes don't get to do regurally. This, next to our morning ride to school is some of my favorite memories with you.</i></h4>
+			  </div>
+			</div>
 		</div>
-		<div class="w3-display-container mySlides">
+		<div class="w3-center w3-display-container mySlides">
 			<img src="./media/Mday/IMG_3222.JPG" alt="Test Photo" style="width:90%;">
+			<div class="w3-content" style="max-width:90%">
+			  <div class="w3-container w3-red">
+			    <h3><b>Travel</b></h3>
+			    <h4><i>I'm not always the biggest supporter of travel, sometimes it puts me in positions I don't like; as seen here! But overall I can tell I am a better person for it and I'm glad you have dragged me across this country. I can't wait to spend time with you this summer!</i></h4>
+			  </div>
+			</div>
 		</div>
-		<div class="w3-display-container mySlides">
+		<div class="w3-center w3-display-container mySlides">
 			<img  src="./media/Mday/IMG_5985.JPG" alt="Slide 5" style="width:90%;">
+			<div class="w3-content" style="max-width:90%">
+			  <div class="w3-container w3-red">
+			    <h3><b>School</b></h3>
+			    <h4><i>Having you at school with me has been an absolute blessing. I don't know how I would have survived High School without your support in my extra cirriculars, motivating in  classes, and helping me everyday. Thank you!</i></h4>
+			  </div>
+			</div>
+		</div>
+		<div class="w3-center w3-display-container mySlides w3-red" style="max-width:100%;"><h3>Happy Mother's Day</h3><h4><i>I know that sometimes our relationship isn't perfect and we don't get a long, but I still feel like we have one of the best Mother-Son relationships and I am ever grateful for that. That is only possible because you are the best Mom out there! Thank you so much for another awesome year and I'm looking forward to the best one ever for my last year at home.</i></h4><h3>Love, Knox</h3>
 		</div>
 	</div>
-		<script>
-		var myIndex = 0;
-		carousel();
+	<div>
 
-		function carousel() {
-		    var i;
-		    var x = document.getElementsByClassName("mySlides");
-		    for (i = 0; i < x.length; i++) {
-		       x[i].style.display = "none";
-		    }
-		    myIndex++;
-		    if (myIndex > x.length) {myIndex = 1}
-		    x[myIndex-1].style.display = "block";
-		    setTimeout(carousel, 5000);
-		}
+	<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+	<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+
+	</div>
+		<script>
+		// var myIndex = 0;
+		// carousel();
+		//
+		// function carousel() {
+		//     var i;
+		//     var x = document.getElementsByClassName("mySlides");
+		//     for (i = 0; i < x.length; i++) {
+		//        x[i].style.display = "none";
+		//     }
+		//     myIndex++;
+		//     if (myIndex > x.length) {myIndex = 1}
+		//     x[myIndex-1].style.display = "block";
+		//     setTimeout(carousel, 5000);
+		// }
+			var slideIndex = 1;
+			showDivs(slideIndex);
+
+			function plusDivs(n) {
+			  showDivs(slideIndex += n);
+			}
+
+			function showDivs(n) {
+			  var i;
+			  var x = document.getElementsByClassName("mySlides");
+			  if (n > x.length) {slideIndex = 1}
+			  if (n < 1) {slideIndex = x.length}
+			  for (i = 0; i < x.length; i++) {
+			     x[i].style.display = "none";
+			  }
+			  x[slideIndex-1].style.display = "block";
+			}
 		</script>
 	</body>
 </html>
