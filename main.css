@@ -1,10 +1,19 @@
 html {
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;
-    margin-left: 5%;
-    margin-top: 5%;
+    margin-left: 2%;
+    margin-top: 2%;
 }
 a {
 	text-decoration: none;
 	font-style: italic;
+}
+body{
+	margin: 0;
+	padding: 0;
+}
+.mySlides{
+	height: 98%;
+	width: 98%;
+	overflow: hidden;
 }
