@@ -15,3 +15,7 @@ body{
 	width: 98%;
 	overflow: hidden;
 }
+img.resize {
+    width: 35%;
+    height: auto;
+}
