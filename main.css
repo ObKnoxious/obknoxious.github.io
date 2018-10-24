@@ -1,19 +1,48 @@
 html {
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;
-    margin-left: 2%;
-    margin-top: 2%;
 }
 a {
 	text-decoration: none;
 	font-style: italic;
 }
 body{
-	margin: 0
-	padding: 0;
+	margin: 1%;
+	padding: 1%;
 }
 .mySlides{
 	height: 98%;
 	width: 98%;
 	overflow: hidden;
+}
+img.resize {
+    float: top;
+    float: right;
+    width: 35%;
+    height: auto;
+}
+.bgreen{
+    background-color: #4caf50;
+    color: #EFEFEF;
+}
+.rad{
+    border-width;
+    border-radius:2px;
+}
+.thr{
+    width:30%;
+    margin:1% 1% 1% 1%;
+}
+.ri{
+    float: right;
+    display: inline-block;
+}
+.le{
+    float: left;
+    display: inline-block;
+}
+@media only screen and (max-width: 600px){
+    .thr{
+        width:100%;
+    }
 }
