@@ -3,6 +3,7 @@ html {
     font-family: 'Josefin Sans', sans-serif;
 }
 a {
+    color: #4caf50;
 	text-decoration: none;
 	font-style: italic;
 }
@@ -10,11 +11,7 @@ body{
 	margin: 1%;
 	padding: 1%;
 }
-.mySlides{
-	height: 98%;
-	width: 98%;
-	overflow: hidden;
-}
+
 img.resize {
     float: top;
     float: right;
@@ -30,6 +27,7 @@ img.resize {
     border-radius:2px;
 }
 .thr{
+    padding: 0% 2% 0% 2%;
     width:30%;
     margin:1% 1% 1% 1%;
 }
@@ -40,6 +38,20 @@ img.resize {
 .le{
     float: left;
     display: inline-block;
+}
+.gscale{
+    color: #404559;
+    transition: ease-in .5s;
+}
+.gscale:hover{
+    color: #FFFFFF;
+    background-color: #404559;
+}
+.tbox{
+    float: top;
+    /*padding: 3% 2% 3% 2%;*/
+    margin-top: 0%;
+    height: 20%;
 }
 @media only screen and (max-width: 600px){
     .thr{
