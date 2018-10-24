@@ -29,3 +29,20 @@ img.resize {
     border-width;
     border-radius:2px;
 }
+.thr{
+    width:30%;
+    margin:1% 1% 1% 1%;
+}
+.ri{
+    float: right;
+    display: inline-block;
+}
+.le{
+    float: left;
+    display: inline-block;
+}
+@media only screen and (max-width: 600px){
+    .thr{
+        width:100%;
+    }
+}
