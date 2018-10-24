@@ -7,8 +7,8 @@ a {
 	font-style: italic;
 }
 body{
-	margin: 0
-	padding: 0;
+	margin: 1%;
+	padding: 1%;
 }
 .mySlides{
 	height: 98%;
@@ -16,6 +16,16 @@ body{
 	overflow: hidden;
 }
 img.resize {
+    float: top;
+    float: right;
     width: 35%;
     height: auto;
+}
+.bgreen{
+    background-color: #4caf50;
+    color: #EFEFEF;
+}
+.rad{
+    border-width;
+    border-radius:2px;
 }
