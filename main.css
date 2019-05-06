@@ -18,6 +18,20 @@ img.resize {
     width: 35%;
     height: auto;
 }
+
+h1{
+     font-size: 250%;
+}
+
+p {
+     font-size: 125%
+}
+.rel{
+	position: relative;
+}
+.abs{
+	position: absolute;
+}
 .bgreen{
     background-color: #4caf50;
     color: #EFEFEF;
@@ -26,10 +40,27 @@ img.resize {
     border-width;
     border-radius:2px;
 }
+.trad{
+	border-style: solid;
+	border-color: #4caf50;
+	border-width: 6px;
+	border-radius: 2px;
+}
 .thr{
     padding: 0% 2% 0% 2%;
     width:30%;
     margin:1% 1% 1% 1%;
+}
+.lthr{
+    padding: 0% 2% 0% 0%;
+    width:21%;
+    margin:1% 0% 0% 1%;
+}
+.0202{
+	padding: 0% 2% 0% 2%;
+}
+.m1{
+	margin:1% 1% 1% 1%;
 }
 .ri{
     float: right;
@@ -38,6 +69,16 @@ img.resize {
 .le{
     float: left;
     display: inline-block;
+}
+.cr{
+	clear: right;
+}
+.cl{
+	clear: left;
+}
+.bo{
+	float: bottom;
+	display: inline-block;
 }
 .gscale{
     color: #404559;
@@ -49,9 +90,22 @@ img.resize {
 }
 .tbox{
     float: top;
-    /*padding: 3% 2% 3% 2%;*/
-    margin-top: 0%;
+    padding: .5% 2% .5% 2%;
+    margin-top: -1%;
     height: 20%;
+}
+.l{
+	text-align: left;
+}
+.c{
+	text-align: center;
+}
+.r{
+	text-align: right;
+}
+.im{
+	max-width: 30%;
+	max-height: auto;
 }
 @media only screen and (max-width: 600px){
     .thr{
