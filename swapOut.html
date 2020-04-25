@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+	<link href="./main.css" rel="stylesheet">
+        <title>Swap Out</title>
+	</head>
+	<body>
+		<h1>Swap Out, find out who isn't playing next!<h1>
+		<div class="rel le lthr 0202">
+			<form id="pl">
+				<label for="p1">Player 1:</label><br>
+				<input type="text" id="p1" name="p1"><br>
+				<label for="p2">Player 2:</label><br>
+				<input type="text" id="p2" name="p2"><br>
+				<label for="p3">Player 3:</label><br>
+				<input type="text" id="p3" name="p3"><br>
+				<label for="p4">Player 4:</label><br>
+				<input type="text" id="p4" name="p4"><br>
+				<label for="p5">Player 5:</label><br>
+				<input type="text" id="p5" name="p5"><br>
+			</form>
+		</div>
+		<div class="rel le lthr 0202">
+			<form id="ki">
+				<label for="k1">Kills:</label><br>
+				<input type="number" pattern="\d+"  id="k1" name="k1"><br>
+				<label for="k2">Kills:</label><br>
+				<input type="number" pattern="\d+"  id="k2" name="k2"><br>
+				<label for="k3">Kills:</label><br>
+				<input type="number" pattern="\d+"  id="k3" name="k3"><br>
+				<label for="k4">Kills:</label><br>
+				<input type="number" pattern="\d+"  id="k4" name="k4"><br>
+				<label for="k5">Kills:</label><br>
+				<input type="number" pattern="\d+"  id="k5" name="k5"><br>
+				<input type="button" onclick="f1()" value="Submit">
+			</form>
+		</div>
+		<div class=" rel le lthr 0202">
+			<div id="js0"></div><br>
+			<div id="js1"></div><br>
+			<div id="js2"></div><br>
+			<div id="js3"></div><br>
+			<div id="js4"></div><br>
+		</div>
+		<div class =" rel le lthr 0202">
+			Random Number Generated:<br>
+			<div id="js5"></div><br>
+			Player Kicked:<br>
+			<div id="js6"></div><br>
+			
+			
+		</div>
+		<script>
+			function f1(){
+				var x = document.getElementById("ki");
+				var y = document.getElementById("pl");
+				var t=0;
+				var i=0;
+				var players = [];
+				var kills = [];
+				for(i=0; i < 5;i++){
+					kills.push(parseInt(x.elements[i].value));
+					t+= parseInt(x.elements[i].value);
+				}
+				for(i=0; i <5;i++){
+					players.push(y.elements[i].value);
+				}
+				var k1 = document.getElementById("k1");
+				var p1p = (kills[4]/t).toFixed(2)*100;
+				var p2p = (kills[3]/t).toFixed(2)*100;
+				var p3p = (kills[2]/t).toFixed(2)*100;
+				var p4p = (kills[1]/t).toFixed(2)*100;
+				var p5p = (kills[0]/t).toFixed(2)*100;
+				var p1s = players[0] + ": " + p1p + "%";
+				var p2s = players[1] + ": " + p2p + "%";
+				var p3s = players[2] + ": " + p3p + "%";
+				var p4s = players[3] + ": " + p4p + "%";
+				var p5s = players[4] + ": " + p5p + "%";
+				//document.getElementById("js0").innerHTML = t;
+				document.getElementById("js0").innerHTML = p1s;
+				document.getElementById("js1").innerHTML = p2s;
+				document.getElementById("js2").innerHTML = p3s;
+				document.getElementById("js3").innerHTML = p4s;
+				document.getElementById("js4").innerHTML = p5s;
+				
+				kp = "";
+				r = (Math.random()).toFixed(1)*100;
+				document.getElementById("js5").innerHTML = r;
+				if(r <= p1p){
+					kp = players[0];
+				}else if(r <= p1p+p2p){
+					kp = players[1];
+				}else if(r <= p1p+p2p+p3p){
+					kp = players[2];
+				}else if(r <= p1p+p2p+p3p+p4p){
+					kp = players[3];
+				}else{
+					kp = players[4];
+				}
+				document.getElementById("js6").innerHTML = kp;
+				
+			}
+		</script>
+	</body>
+	
