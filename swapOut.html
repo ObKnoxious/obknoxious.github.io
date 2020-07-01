@@ -7,7 +7,16 @@
 	<link href="./main.css" rel="stylesheet">
         <title>Swap Out</title>
 	</head>
+	<style>
+		body{
+			background-image: url("./media/aleksib.jpg");
+			background-position: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+		}
+	</style>
 	<body>
+		
 		<h1>Swap Out, find out who isn't playing next!<h1>
 		<div class="rel le lthr 0202">
 			<form id="pl">
@@ -35,7 +44,7 @@
 				<input type="number" pattern="\d+"  id="k4" name="k4"><br>
 				<label for="k5">Kills:</label><br>
 				<input type="number" pattern="\d+"  id="k5" name="k5"><br>
-				<input type="button" onclick="f1()" value="Submit">
+				<input type="button" onclick="f2()" value="Submit">
 			</form>
 		</div>
 		<div class=" rel le lthr 0202">
@@ -46,7 +55,7 @@
 			<div id="js4"></div><br>
 		</div>
 		<div class =" rel le lthr 0202">
-			Random Number Generated:<br>
+			Player's Kept:<br>
 			<div id="js5"></div><br>
 			Player Kicked:<br>
 			<div id="js6"></div><br>
@@ -54,6 +63,39 @@
 			
 		</div>
 		<script>
+			function f2(){
+				var x = document.getElementById("ki");
+				var y = document.getElementById("pl");
+				var t=0;
+				var i=0;
+				var bag = [];
+				var keep = [];
+				var pk = "";
+				for(i=0;i<5;i++){
+					for(j=0;j<(x.elements[i].value);j++){
+						bag.push(y.elements[i].value);
+					}
+				}
+				sent = true;
+				while(sent){
+					r = Math.floor(Math.random() * ((bag.length -1) - 0)) +0;
+					if(!keep.includes(bag[r])){
+						keep.push(bag[r]);
+					}
+					if(keep.length == 4){
+						sent = false;
+					}
+				}
+				for(i=0;i<5;i++){
+					if(!keep.includes(y.elements[i].value)){
+						pk = y.elements[i].value;
+					}
+				}
+				var ks = keep[0] + " " + keep[1] + " " + keep[2] + " " + keep[3];
+				document.getElementById("js5").innerHTML = ks;
+				document.getElementById("js6").innerHTML = pk;
+			}
+			
 			function f1(){
 				var x = document.getElementById("ki");
 				var y = document.getElementById("pl");
@@ -101,7 +143,6 @@
 					kp = players[4];
 				}
 				document.getElementById("js6").innerHTML = kp;
-				
 			}
 		</script>
 	</body>
