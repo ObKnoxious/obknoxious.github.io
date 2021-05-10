@@ -3,6 +3,12 @@
  * Copyright 2014-2017 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
+ 
+/* Custom CSS by Knox */
+.flex {
+	display: flex;
+	flex-wrap: wrap;
+}
 .materialize-red {
   background-color: #e51c23 !important;
 }
@@ -4700,10 +4706,26 @@ small {
 
 @media only screen and (min-width: 960px) {
   .flow-text {
-    font-size: 1.68rem;
+    font-size: 1.5rem;
   }
 }
 
+/* Knox code for larger scaling screens */
+@media only screen and (min-width: 1200px) {
+  .flow-text {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (min-width: 1340px) {
+  .flow-text {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .flow-text {
+    font-size: 1.35rem;
+  }
+}
 @media only screen and (max-width: 360px) {
   .flow-text {
     font-size: 1.2rem;
