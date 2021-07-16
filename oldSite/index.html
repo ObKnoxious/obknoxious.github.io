@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+	<link href="./main.css" rel="stylesheet">
+        <title>Knox Crichton</title>
+	</head>
+	<body>
+        <div class="bgreen rad tbox"> 
+            <h1>Welcome to knoxcrichton.com!</h1>
+	</div>
+	<div class="thr le cr gscale rad">
+		<div class="l">
+			<h1>Knox Crichton</h1>
+		</div>
+		<div class="l">
+			<p>Welcome to my personal website. This website was developed by me, Knox Crichton, using HTML 5, CSS 3, and a little bit of JavaScript. GitHub pages is used for hosting and serves as a landing page for my projects. It is currently still under construction, but should be finished soon.</p>
+		</div>
+		<div class="r tg">
+			<h4><a href="./me.html">A little more about me ></a></h4>
+		</div>
+	</div>
+    <div>
+		<img class="slides rel thr rad ri" src="./media/profile.png" alt="Me, Knox Crichton">
+		<img class="slides rel thr rad ri" src="./media/ornl.jpg" alt="Me at ORNL">
+	</div>
+	<a href="https://www.youtube.com/channel/UCWI-UMySNofStygxyJ_xzkA">
+	<div class="le cr lthr trad gscale nt">
+		<img class="le im" src="./media/ytlogo.png" alt="YouTube Logo">
+		<div class="l nt">
+			<p>My personal YouTube page, currently hosting mostly videos of school projects</p>
+		</div>
+	
+	</div>
+	</a>
+	<a href="https://twitter.com/ob_knoxious">
+	<div class="le cr lthr trad gscale nt">
+		<img class="le im" src="./media/twlogo.png" alt="Tiwtter Logo">
+		<div class="l">
+			<p>My currently inactive Twitter, it might be used one day...</p>
+		</div>
+	</div>
+	</a>
+	<a href="https://www.instagram.com/ob_knoxious/">
+	<div class="le cr lthr trad gscale nt">
+		<img class="le im" src="./media/instalogo.png" alt="Instagram Logo">
+		<div class="l">
+			<p>I use Instagram to share things from my daily life like cooking or playing games.</p>
+		</div>
+	</div>
+	</a>
+	<a href="https://www.linkedin.com/in/knox-crichton-82a827199/">
+	<div class="le cr lthr trad gscale nt">
+		<img class="le im" src="./media/lilogo.png" alt="Linkedin Logo">
+		<div class="l">
+			<p>My LinkedIn holds a professional profile and empolyment information.</p>
+		</div>
+	</div>
+	</a>
+	<a href="https://github.com/ObKnoxious">
+	<div class="le cr lthr trad gscale nt">
+		<img class="le im" src="./media/ghlogo.png" alt="GitHub Logo">
+		<div class="l">
+			<p>My GitHub holds all of my coding projects, many of which are public</p>
+		</div>
+	</div>
+	</a>
+	<a href="KnoxCrichtonResume.pdf">
+	<div class="le cr lthr trad gscale nt">
+		<img class="le im" src="./media/resume.png" alt="Resume Image">
+		<div class="l">
+			<p>An up to date copy of my Résumé available to download as a PDF</p>
+		</div>
+	</div>
+	</a>
+	<div class="le cr lthr trad gscale nt">
+		<img class="le im" src="./media/chef.png" alt="Cooking Icon">
+		<div class="l">
+			<p>I love cooking as a hobby and keep an archive of dishes I've made</p>
+		</div>
+	</div>
+	<div class="le cr lthr trad gscale nt">
+		<img class="le im" src="./media/mail.png" alt="Mail Icon">
+		<div class="l">
+			<p>If you have any questions, please reach out and contact me</p>
+		</div>
+	</div>
+	
+	<script>
+		var s =0;
+		slideshow();
+		
+		function slideshow(){
+			var i;
+			var x = document.getElementsByClassName("slides");
+			for(i=0;i<x.length;i++){
+				x[i].style.display="none";
+			}
+			s++;
+			if(s > x.length){
+				s=1
+			}
+			x[s-1].style.display="block";
+			setTimeout(slideshow, 4500);
+		}
+		
+	</script>
+	
+	</body>
+</html>
